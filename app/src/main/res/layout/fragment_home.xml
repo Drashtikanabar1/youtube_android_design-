@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+   <HorizontalScrollView
+       android:id="@+id/scrollView"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       app:layout_constraintEnd_toEndOf="parent"
+       android:scrollbars="none"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent">
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal">
+
+         <com.google.android.material.card.MaterialCardView
+             android:id="@+id/withIconCard"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_margin="5dp"
+             android:background="@drawable/card_style"
+             app:cardBackgroundColor="#26C4C4C4"
+             app:cardCornerRadius="8dp"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toTopOf="parent"
+             app:strokeColor="#DADADA">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+               <!-- Positioned Container -->
+               <ImageView
+                   android:id="@+id/imageView3"
+                   android:layout_width="20dp"
+                   android:layout_height="24.84dp"
+                   android:layout_margin="5dp"
+                   android:clipToOutline="true"
+                   android:src="@drawable/notifications_none"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toTopOf="parent" />
+
+               <!-- Positioned Text -->
+               <TextView
+                   android:id="@+id/filterName"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+
+                   android:fontWeight="400"
+                   android:padding="8dp"
+                   android:text="Shorts"
+                   android:textColor="@android:color/black"
+                   android:textSize="15sp"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintStart_toEndOf="@+id/imageView3"
+                   app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+         </com.google.android.material.card.MaterialCardView>
+
+         <androidx.recyclerview.widget.RecyclerView
+             android:id="@+id/horizontalRecyclerView"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+
+             android:orientation="horizontal"
+             app:layout_constraintStart_toEndOf="@+id/withIconCard"
+             app:layout_constraintTop_toTopOf="parent" />
+         <!--</ScrollView>-->
+      </androidx.constraintlayout.widget.ConstraintLayout>
+
+   </HorizontalScrollView>
+
+   <androidx.recyclerview.widget.RecyclerView
+       android:id="@+id/imageCardView"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical"
+       android:paddingBottom="50dp"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/scrollView" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

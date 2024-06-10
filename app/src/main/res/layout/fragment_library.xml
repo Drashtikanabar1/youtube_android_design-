@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.Subscription.SubscriptionFragment">
+
+
+<!--    <include-->
+<!--        android:id="@+id/include"-->
+<!--        layout="@layout/button_layout"-->
+<!--        app:button_background="@drawable/background_trending"-->
+<!--        app:button_text="Trending" />-->
+<!--    <include layout="@layout/button_layout"-->
+<!--        app:button_text="Music"-->
+<!--        app:button_background="@drawable/background_music" />-->
+<!--    <include layout="@layout/button_layout"-->
+<!--        app:button_text="Gaming"-->
+<!--        app:button_background="@drawable/background_gaming" />-->
+
+
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/imageCardView"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+
+<!--        android:orientation="vertical"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+</androidx.constraintlayout.widget.ConstraintLayout>

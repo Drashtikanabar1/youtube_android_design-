@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <data>
+        <variable
+            name="youtubeClass"
+            type="com.example.youtube_design.ui.home.YoutubeClass" />
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp">
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/title_image"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/image_a"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/Rounded_color" />
+
+    <!--    <FrameLayout-->
+    <!--        android:id="@+id/side_image"-->
+    <!--        android:layout_width="36dp"-->
+    <!--        android:layout_height="36dp"-->
+    <!--        android:layout_centerInParent="true"-->
+    <!--        android:layout_marginTop="13dp"-->
+    <!--        android:background="@drawable/white_backgound_border"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/title_image">-->
+
+
+    <!--        &lt;!&ndash; Replace with your photo &ndash;&gt;-->
+
+    <!--    </FrameLayout>-->
+    <ImageView
+
+        android:id="@+id/imageView"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="13dp"
+        android:src="@drawable/figma"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_image" />
+
+    <TextView
+        android:id="@+id/heading"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="16dp"
+        android:text="@{youtubeClass.heading}"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintEnd_toStartOf="@+id/more_icon"
+        app:layout_constraintTop_toBottomOf="@+id/title_image"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constrainedWidth="true" />
+
+    <TextView
+        android:id="@+id/subTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="5dp"
+        android:text="Figma"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/heading" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="3dp"
+        android:layout_height="3dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/dot_shape"
+        app:layout_constraintStart_toEndOf="@+id/subTitle"
+        app:layout_constraintTop_toBottomOf="@+id/heading" />
+
+    <TextView
+        android:id="@+id/views"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="5dp"
+
+        android:text= "@{String.format(@string/views_count, youtubeClass.viewsCount)}"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/heading" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="3dp"
+        android:layout_height="3dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/dot_shape"
+        app:layout_constraintStart_toEndOf="@+id/views"
+        app:layout_constraintTop_toBottomOf="@+id/heading" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="5dp"
+
+        android:text="@{youtubeClass.time}"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/heading"
+        app:layout_constraintStart_toEndOf="@+id/view2"
+        tools:layout_editor_absoluteY="231dp" />
+
+    <ImageView
+        android:id="@+id/more_icon"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/more_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/heading"
+        app:layout_constraintTop_toBottomOf="@+id/title_image" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
