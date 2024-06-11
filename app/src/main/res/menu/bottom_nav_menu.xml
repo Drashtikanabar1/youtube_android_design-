@@ -4,7 +4,7 @@
 
     <item
         android:id="@+id/navigation_home"
-        android:icon="@drawable/home_icon"
+        android:icon="@drawable/home_selected_icon"
         android:visible="true"
         android:title="@string/title_home" />
 

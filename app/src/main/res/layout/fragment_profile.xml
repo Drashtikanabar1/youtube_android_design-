@@ -15,6 +15,8 @@
         android:layout_marginTop="5dp"
         app:cardBackgroundColor="#26C4C4C4"
         app:cardCornerRadius="8dp"
+        app:strokeColor="@color/navigationColor"
+        app:strokeWidth="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -76,6 +78,8 @@ android:clickable="true"
         android:layout_marginTop="5dp"
         app:cardBackgroundColor="#26C4C4C4"
         app:cardCornerRadius="5dp"
+        app:strokeColor="@color/navigationColor"
+        app:strokeWidth="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/materialCardView">
@@ -155,4 +159,19 @@ android:clickable="true"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/materialCardView2" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:text="Privacy Policy   Terms of Services"
+        android:textColor="@color/black"
+        android:textFontWeight="400"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageCardView" />
+    " />
 </androidx.constraintlayout.widget.ConstraintLayout>

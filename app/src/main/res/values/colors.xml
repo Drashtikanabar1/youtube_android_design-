@@ -7,8 +7,12 @@
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
     <color name="white">#FFFFFF</color>
-    <color name="navigationColor">#C4C4C426</color>
+    <color name="navigationColor">#26C4C4C4</color>
+    <color name="colorSurface">#FFFFFF</color>
+    <color name="colorOnSurface">#000000</color>
     <color name="setting_color">#076AFE</color>
+
+
 
 
 </resources>

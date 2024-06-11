@@ -37,13 +37,13 @@
         android:layout_alignParentBottom="true"
         android:layout_marginHorizontal="6dp"
         android:layout_marginBottom="6dp"
-        android:background="@drawable/white_cornor_button"
+        android:background="@drawable/navigation_container"
         app:labelVisibilityMode="labeled"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:itemTextAppearanceActive="@style/BottomNavigationView.Active"
-        app:itemTextAppearanceInactive="@style/BottomNavigationView.Inactive"
+        app:itemActiveIndicatorStyle="@android:color/transparent"
+
         app:menu="@menu/bottom_nav_menu" />
 
 

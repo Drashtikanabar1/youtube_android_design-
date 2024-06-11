@@ -125,7 +125,7 @@ class DashboardFragment : Fragment() {
         )
 
         filterNames = arrayOf(
-            "Trading",
+            "Trending",
             "Music",
             "Gaming",
             "News",

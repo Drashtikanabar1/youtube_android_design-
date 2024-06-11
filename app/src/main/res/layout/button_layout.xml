@@ -4,58 +4,52 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/custom_button"
-    android:layout_width="175dp"
-    android:layout_height="40dp"
+    android:layout_width="wrap_content"
+    android:layout_height="48dp"
     android:orientation="vertical"
     android:layout_margin="5dp">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
 
+        <ImageView
+            android:id="@+id/backgroundImage"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/tranding"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/backgroundImage"
-        android:layout_width="175dp"
-        android:layout_height="40dp"
-        android:layout_weight="1"
-        android:src="@drawable/tranding"
-        android:text="Button Text"
-        android:textColor="@android:color/black"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@+id/iconImage"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="12dp"
+            android:src="@drawable/home_selected_icon"
+            android:textColor="@android:color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/backgroundImage"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/iconImage"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:layout_marginLeft="12dp"
-        android:src="@drawable/home_icon"
-        android:text="Button Text"
-        android:textColor="@android:color/black"
-        android:textSize="16sp"
-        android:layout_marginVertical="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/backgroundImage"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+android:layout_marginVertical="12dp"
+android:layout_marginLeft="7sp"
+            android:gravity="center"
+            android:src="@drawable/tranding"
+            android:text="Trending"
+            android:textColor="@android:color/white"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@+id/iconImage"
+            app:layout_constraintTop_toTopOf="@+id/backgroundImage" />
 
-    <TextView
-        android:id="@+id/title"
-        android:layout_width="76dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="40dp"
-        android:layout_marginVertical="11dp"
-        android:src="@drawable/tranding"
-        android:text="Treading"
-        android:textColor="@android:color/white"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/backgroundImage"
-        app:layout_constraintStart_toEndOf="@+id/iconImage"
-        app:layout_constraintTop_toTopOf="@+id/iconImage"
-        app:layout_constraintVertical_bias="0.1" />
-
-
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>
 
 

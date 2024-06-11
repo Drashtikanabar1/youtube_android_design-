@@ -6,8 +6,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.core.view.isVisible
 
-import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentTransaction
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 
@@ -15,7 +13,6 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupWithNavController
 import com.example.youtube_design.databinding.ActivityNavigationViewBinding
-import com.example.youtube_design.ui.profile.ProfileFragment
 
 
 class MainActivity : AppCompatActivity() {
@@ -70,14 +67,48 @@ class MainActivity : AppCompatActivity() {
     private fun setCurrentDestinationListener() {
         navController.addOnDestinationChangedListener { _, destination, _ ->
             when (destination.id) {
-                R.id.navigation_home,
-                R.id.navigation_Explore,
-                R.id.navigation_library,
-                R.id.navigation_subscription-> {
+                R.id.navigation_home  ->{
+                    binding.bottomNavigationView.menu.findItem(R.id.navigation_home).setIcon(
+                        R.drawable.home_selected_icon)
+                    binding.bottomNavigationView.menu.findItem(R.id.navigation_Explore).setIcon(R.drawable.explore_icon)
+                    binding.bottomNavigationView.menu.findItem(R.id.navigation_library).setIcon(R.drawable.library_icon)
+                    binding.bottomNavigationView.menu.findItem(R.id.navigation_subscription).setIcon(R.drawable.subscription_icon)
+                    binding.bottomNavigationView.isVisible =true
+                    binding.customToolbar.customToolbar.isVisible =true
+                    binding.customNavFavouritesFab.isVisible =true
+
+                }
+                R.id.navigation_Explore -> {
+                    binding.bottomNavigationView.menu.findItem(R.id.navigation_home).setIcon(
+                        R.drawable.home_icon)
+                    binding.bottomNavigationView.menu.findItem(R.id.navigation_Explore).setIcon(R.drawable.explore_selected_icon)
+                    binding.bottomNavigationView.menu.findItem(R.id.navigation_library).setIcon(R.drawable.library_icon)
+                    binding.bottomNavigationView.menu.findItem(R.id.navigation_subscription).setIcon(R.drawable.subscription_icon)
+                    binding.bottomNavigationView.isVisible =true
+                    binding.customToolbar.customToolbar.isVisible =true
+                    binding.customNavFavouritesFab.isVisible =true
+                                           }
+                R.id.navigation_library-> {
+                    binding.bottomNavigationView.menu.findItem(R.id.navigation_home).setIcon(
+                        R.drawable.home_icon)
+                    binding.bottomNavigationView.menu.findItem(R.id.navigation_Explore).setIcon(R.drawable.explore_icon)
+                    binding.bottomNavigationView.menu.findItem(R.id.navigation_library).setIcon(R.drawable.library_selected_icon)
+                    binding.bottomNavigationView.menu.findItem(R.id.navigation_subscription).setIcon(R.drawable.subscription_icon)
                     binding.bottomNavigationView.isVisible =true
                     binding.customToolbar.customToolbar.isVisible =true
                     binding.customNavFavouritesFab.isVisible =true
                 }
+                R.id.navigation_subscription-> {
+                    binding.bottomNavigationView.menu.findItem(R.id.navigation_home).setIcon(
+                        R.drawable.home_icon)
+                    binding.bottomNavigationView.menu.findItem(R.id.navigation_Explore).setIcon(R.drawable.explore_icon)
+                    binding.bottomNavigationView.menu.findItem(R.id.navigation_library).setIcon(R.drawable.library_icon)
+                    binding.bottomNavigationView.menu.findItem(R.id.navigation_subscription).setIcon(R.drawable.subscription_selected_icon)
+                    binding.bottomNavigationView.isVisible =true
+                    binding.customToolbar.customToolbar.isVisible =true
+                    binding.customNavFavouritesFab.isVisible =true
+                }
+
 
                 else -> {
                     binding.bottomNavigationView.isVisible = false

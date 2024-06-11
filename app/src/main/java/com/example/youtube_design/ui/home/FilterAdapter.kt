@@ -36,7 +36,7 @@ class  FilterAdapter(private val filterList: ArrayList<FliterClass>) :
                 binding.filterCard.setCardBackgroundColor(itemView.context.getColor(R.color.black))
                 binding.filterName.setTextColor(itemView.context.getColor(R.color.white))
             } else {
-                binding.filterCard.setCardBackgroundColor(itemView.context.getColor(R.color.white))
+                binding.filterCard.setCardBackgroundColor(itemView.context.getColor(R.color.navigationColor))
                 binding.filterName.setTextColor(itemView.context.getColor(R.color.black))
             }
         }
